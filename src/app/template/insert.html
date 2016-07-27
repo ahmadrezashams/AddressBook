@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+    <title>{{title}}</title>
+	{% load staticfiles %}
+    <link href="{% static 'css/insert.css'%}" rel="stylesheet" />
+	{% load staticfiles %}
+    <script src="{% static 'js/removeUrl.js' %}" ></script>
+    
+</head>
+<body style="direction:ltr;">
+	<div id='person'>
+		<h2>Person Profile</h2>
+		<form method='get' action name='fm1' >
+			<label>Name:</label><br/>
+			<input type='text' name='name' required/><br/>
+			<label>Family:</label><br/>      
+			<input type='text' name='family' required/><br/>
+			<label>Gender:</label> <br/>
+			<input type='radio' name='gender' value='0' checked/>male<br/>
+			<input type='radio' name='gender' value='1'/>female
+			<br/>
+			<label>Type:</label> <br/>
+			<input type='radio' name='typecontact' value="0" checked/>person<br/>
+			<input type='radio' name='typecontact' value="1"/>businses<br/>
+			<input type='submit' href='#' value="Save" >
+		</form>
+		
+	</div>
+	<hr>
+	<div>
+	<h2>Person Phone</h2>
+	<form method='get' action name=fm2" >
+		<label>ID:<label><br/>
+		<select name="id">
+		{% if contact %}
+			{% for item in contact%}
+				<option  value='{{item.id}}'>{{item.name}}-{{item.family}}</option>
+			{% endfor%}
+		{% endif %}
+		</select>
+		 <br/>
+		<label>Phone:<label><br/>      
+		<input type='text' name='phone' maxlength="12" required/><br/>
+		
+		<input type='submit' value="Save"  >
+	</form>
+	</div>
+	<a href="{% url 'home' %}" class="add">Back</a>
+</body>
+</html>

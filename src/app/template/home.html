@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{title}}</title>
+	{% load staticfiles %}
+    <link href="{% static 'css/mystyle.css'%}" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <form action="{% url 'search' %}" method="get">
+            <div class="searchbox">
+                <p>
+                    <input type="radio" name="type" value="0" checked> اشخاص<br>
+                    <input type="radio" name="type" value="1"> تجاری<br>
+                </p>
+                <input id="bsearch" type="submit" value="بگرد" />
+                <input type="search" name="q" placeholder="جستجو کنید"  required/>
+
+            </div>
+        </form>
+
+    </header>
+
+
+    <section class="clearfix">
+        <div id="center">
+    {% if search %}
+	<div style="margin-top:10px">
+		<h1> جستجو براساس "{{search}}"</h1>
+	</div>
+	{%endif%}
+	
+	{% if contact %}
+		{% for item in contact%}
+            <div class="box">
+				<div class="nfamily">
+				    <a href="#">{{item.contact.family}}</a>
+					<a href="#">{{item.contact.name}}</a>
+                </div>
+                <div class="phonenumber">
+                    <a href="#">{{item.phone}}</a>
+					
+                </div>
+            </div>
+		{% endfor%}
+	{%else%}
+		<div class="nbox">
+		
+				<p>Not Found</p>
+        </div>
+	{%endif%}
+
+       
+        </div>
+
+    </section>
+    <footer>حقوق مطالب، تصاویر و طرح قالب برای سایت  محفوظ است.</footer>
+	<a href="{% url 'insert' %}" class="add">+</a>
+</body>
+</html>
+

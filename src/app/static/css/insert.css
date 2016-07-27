@@ -1,0 +1,62 @@
+body{
+background-color:#607D8B;
+color:#fff;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+	box-sizing: border-box;
+	margin:0px;
+	
+}
+label{
+	    font-size: 20px;
+}
+input[type="text"]
+{
+	width:250px;
+	height:30px;
+	margin-bottom:5px;
+	
+}
+input[type="submit"]
+{
+	width:50px;
+	height:30px;
+	margin-top:5px;
+	
+}
+select{
+width:250px;
+height:30px;
+	margin-bottom:5px;
+}
+div{
+	width:400px;
+	margin-left:3px;
+
+color:#000;
+padding:10px;
+
+
+}
+div h2{
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:5px;
+	color:#fff;
+	font-size: 30px;
+	text-shadow: 4px 3px 0 #000,9px 8px 0 rgba(0,0,0,0.15);
+	
+}
+a{
+color:#fff;
+margin-left:100px;
+font-size:30px;
+}
