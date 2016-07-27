@@ -1,4 +1,4 @@
 # AddressBook
-address book template website project
-##test
+address book template Django website project
+##Screenshot
 <img src="http://sm.uploads.im/t/cN6ua.png" />
